@@ -4,9 +4,9 @@
 
 // console.log(sum(5, 10));
 
-const habbies = ["Reading", "Traveling", "Cooking", "Gaming"];
+// const habbies = ["Reading", "Traveling", "Cooking", "Gaming"];
 
-console.log(habbies.map(hobby=>'habbies :'+ hobby));
+// console.log(habbies.map(hobby=>'habbies :'+ hobby));
 /*PS D:\Project\Node JS\Node-JS\basic> node .\array.js
 [
   'habbies :Reading',
@@ -14,3 +14,10 @@ console.log(habbies.map(hobby=>'habbies :'+ hobby));
   'habbies :Cooking',
   'habbies :Gaming'
 ]*/
+
+const person ={
+    name: "Aravinth",}
+
+person.name = "Shree Priyanka";
+
+console.log(person.name); // Output: Shree Priyanka
