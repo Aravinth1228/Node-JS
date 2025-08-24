@@ -17,11 +17,19 @@ const server = http.createServer((req, res) => {
             body.push(chunk);
         });
         req.on('end', () => {
+            console.log("End Event");
             const parsedBody = Buffer.concat(body).toString();
-            const message = parsedBody.split('=')[1];
+            const message = decodeURIComponent(parsedBody.split('=')[1]);
             fs.writeFileSync('message.txt', message);
-        });
-        return;
+            res.statusCode = 302;
+            res.setHeader('Location', '/');
+            return res.end();
+        })
+       fs.writeFileSync('message.txt', 'DUMMY');
+       console.log("After End Event");
+        res.statusCode = 302;
+        res.setHeader('Location', '/');
+        return  res.end();
     }
     res.write('<h1>Hello World</h1>');
     res.end();
