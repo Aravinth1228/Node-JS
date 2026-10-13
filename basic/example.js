@@ -1,8 +1,4 @@
- var name = "Aravinth";
- var age = 20;
-
- function display( name, age ) {
-    return "Name:" + name + '\n'+ "Age:" + age;
- }
-
- console.log(display(name, age));
+console.log(globalThis);
+console.log(process.version);
+console.log(process.platform);
+console.log(__dirname);
