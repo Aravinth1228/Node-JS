@@ -1,0 +1,26 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aravinth1228/Node-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aravinth1228/Node-JS/issues"
+  },
+  "homepage": "https://github.com/Aravinth1228/Node-JS#readme",
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "ethers": "^6.17.0",
+    "express": "^5.3.0"
+  }
+}
