@@ -1,0 +1,10 @@
+[
+  {
+    "id": "46bc42f9-ff68-411d-8b57-f362a6fa7b98",
+    "from": "0xAlice",
+    "to": "0xBob",
+    "amount": 100,
+    "status": "PENDING",
+    "createdAt": "2026-11-12T05:21:46.659Z"
+  }
+]
