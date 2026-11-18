@@ -3,11 +3,23 @@ const fs = require("fs");
 const path = require("path");
 
 const server = http.createServer((req, res) => {
-    console.log("Request received");
+    console.log(`Request received for: ${req.url}`);
 
     res.setHeader("Content-Type", "text/html");
 
-    const filePath = path.join(__dirname, "index.html");
+    let fileName = "index.html";
+
+    if (req.url === "/" || req.url === "/index") {
+        fileName = "index.html";
+    } else if (req.url === "/home") {
+        fileName = "home.html";
+    } else {
+        res.statusCode = 404;
+        res.end("<h1>404 - Page Not Found</h1>");
+        return;
+    }
+
+    const filePath = path.join(__dirname, fileName);
 
     fs.readFile(filePath, (err, data) => {
         if (err) {
